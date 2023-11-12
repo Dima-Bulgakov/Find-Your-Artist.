@@ -8,13 +8,43 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    // MARK: - Properties
+    @EnvironmentObject var viewModel: ViewModel
+    @State private var isShowAllDesigners = false
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack {
+            
+            VStack {
+                // MARK: SearchingView and ShowAllDesignersButton
+                HStack {
+                    SearchAndFilterBar(searchPartner: $viewModel.searchPartners)
+                    ShowAllDesignersButton(isShowAllDesigners: $isShowAllDesigners)
+                }
+                .padding(.horizontal)
+                
+                // MARK: Designers or  AllDesignsView
+                if isShowAllDesigners {
+                    PartnersView()
+                } else {
+                    PreviewCardView()
+                }
+            }
+            .background(Color.main)
+        }
+        .navigationDestination(for: Partner.self) { partner in
+            PartnerView(model: partner)
+        }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+// MARK: - Preview
+struct AllDesignsView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(ViewModel(service: NetworkManager()))
     }
 }

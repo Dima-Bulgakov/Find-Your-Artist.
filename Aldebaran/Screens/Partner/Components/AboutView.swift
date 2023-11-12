@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct AboutView: View {
+    
+    // MARK: - Properties
+    let model: Partner
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("About")
+                .font(.headline)
+                .padding(.bottom, 8)
+            Text(model.description)
+                .font(.subheadline)
+        }
+        .foregroundColor(.font)
+        .padding(.top)
+        .padding(.horizontal)
     }
 }
 
+// MARK: - Preview
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        AboutView(model: PartnerData.shared.partners[3])
     }
 }

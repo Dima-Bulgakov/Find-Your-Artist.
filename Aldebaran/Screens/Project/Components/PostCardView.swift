@@ -7,14 +7,15 @@
 
 import SwiftUI
 
+// MARK: - PostCard for grid project
 struct PostCardView: View {
+    
+    var post: Picture
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct PostCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostCardView()
+        Image(post.imageURL)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .cornerRadius(10)
     }
 }

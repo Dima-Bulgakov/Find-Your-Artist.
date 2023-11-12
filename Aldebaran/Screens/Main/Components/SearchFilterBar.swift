@@ -7,14 +7,53 @@
 
 import SwiftUI
 
-struct SearchFilterBar: View {
+struct SearchAndFilterBar: View {
+    
+    // MARK: - Properties
+    @Environment(\.dismiss) var dismiss
+    @Binding var searchPartner: String
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            // MARK: Searching View
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.second)
+                
+                TextField("Search", text: $searchPartner)
+                    .font(.caption)
+                    .foregroundColor(.font)
+                    .accentColor(.second)
+                
+                Spacer()
+                
+                // MARK: Clear Button
+                Button {
+                    if !searchPartner.isEmpty {
+                        searchPartner = ""
+                    }
+                } label: {
+                    Image(systemName: "xmark.circle")
+                        .foregroundColor(.second)
+                }
+            }
+            .padding()
+            .overlay {
+                Capsule()
+                    .stroke(lineWidth: 0.3)
+                    .foregroundColor(.second)
+                    .shadow(color: .black.opacity(0.3), radius: 4)
+            }
+        }
     }
 }
 
-struct SearchFilterBar_Previews: PreviewProvider {
+// MARK: - Preview
+struct SearchAndFilterBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchFilterBar()
+        SearchAndFilterBar(searchPartner: .constant(""))
     }
 }
+
+

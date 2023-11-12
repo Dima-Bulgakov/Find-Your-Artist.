@@ -5,7 +5,6 @@
 //  Created by Dima on 12.11.2023.
 //
 
-
 import SwiftUI
 
 // MARK: Designer Model
