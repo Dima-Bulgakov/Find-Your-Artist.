@@ -19,13 +19,6 @@ Therefore, all masters in the application are verified
 - Dark and light mode
 
 
-## Project Features
-
-- SwiftUI
-
-- MVVM
-
-
 ## Future Functionality
 
 - Add the other art partners
@@ -41,7 +34,7 @@ Therefore, all masters in the application are verified
 -->
 </p>
 
-![TaskFlowBoard](https://github.com/Dima-Bulgakov/TaskFlow/assets/111886499/9ac7cce9-1c53-4c64-9460-07da1ab6156c)
+![TaskFlowBoard](https://github.com/Dima-Bulgakov/Pet-Project-Aldebaran/blob/2a0b65616aeafbf3f8f0943821684d59751ed293/screens.png)
 
 ## Tools
 
