@@ -60,7 +60,7 @@ struct MainPictureView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(designer.brandName)
-                        .font(.title)
+                        .font(.system(size: 25, weight: .regular, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(.titleFont)
                     

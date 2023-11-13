@@ -63,7 +63,7 @@ struct PreviewCardView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(partner.brandName)
-                            .font(.title)
+                            .font(.system(size: 25, weight: .regular, design: .rounded))
                             .fontWeight(.bold)
                             .foregroundColor(.titleFont)
                         

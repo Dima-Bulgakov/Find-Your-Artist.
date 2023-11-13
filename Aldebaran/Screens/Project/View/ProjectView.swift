@@ -95,6 +95,7 @@ struct ProjectView: View {
                     }
                     .animation(.easeInOut, value: columns)
                 }
+                
             }
             .background(Color.main)
         }
