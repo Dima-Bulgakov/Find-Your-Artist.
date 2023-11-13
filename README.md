@@ -1,6 +1,7 @@
 # Aldebaran
 
 iOS Pet Project · A social network for finding people who create art products such as: interiors, sculptures, paintings, graphic design etc.
+</p>
 In the application you can choose the master whose work you like and contact with him or her. 
 </p>
 To show your works in Aldebaran you need to have realised projects and status in the world of art and design. 
