@@ -7,14 +7,30 @@
 
 import SwiftUI
 
-struct OptionView: View {
+struct OptionsView: View {
+    
+    // MARK: - Properties
+    let model: Partner
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 16) {
+            ForEach(model.options) { option in
+                HStack {
+                    Image(systemName: option.picture)
+                    Text(option.title)
+                }
+                .font(.subheadline)
+                .foregroundColor(.font)
+            }
+        }
+        .padding()
     }
 }
 
-struct OptionView_Previews: PreviewProvider {
+// MARK: - Preview
+struct OptionsView_Previews: PreviewProvider {
     static var previews: some View {
-        OptionView()
+        OptionsView(model: PartnerData.shared.partners[3])
     }
 }

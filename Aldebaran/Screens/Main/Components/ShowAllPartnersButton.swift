@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct ShowAllPartnersButton: View {
+    
+    @Binding var isShowAllPartners: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            withAnimation(.easeInOut(duration: 0.5)) {
+                isShowAllPartners.toggle()
+            }
+        } label: {
+            Image(systemName: "circle.grid.3x3.fill")
+                .font(.title)
+                .foregroundColor(.second)
+        }
+        .padding(.leading)
     }
 }
 
 struct ShowAllPartnersButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowAllPartnersButton()
+        ShowAllPartnersButton(isShowAllPartners: .constant(true))
     }
 }

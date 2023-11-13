@@ -11,7 +11,7 @@ struct MainView: View {
     
     // MARK: - Properties
     @EnvironmentObject var viewModel: ViewModel
-    @State private var isShowAllDesigners = false
+    @State private var isShowAllPartners = false
     
     // MARK: - Body
     var body: some View {
@@ -22,12 +22,12 @@ struct MainView: View {
                 // MARK: SearchingView and ShowAllDesignersButton
                 HStack {
                     SearchAndFilterBar(searchPartner: $viewModel.searchPartners)
-                    ShowAllDesignersButton(isShowAllDesigners: $isShowAllDesigners)
+                    ShowAllPartnersButton(isShowAllPartners: $isShowAllPartners)
                 }
                 .padding(.horizontal)
                 
                 // MARK: Designers or  AllDesignsView
-                if isShowAllDesigners {
+                if isShowAllPartners {
                     PartnersView()
                 } else {
                     PreviewCardView()
