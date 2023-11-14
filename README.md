@@ -37,6 +37,10 @@ Therefore, all masters in the application are verified
 
 ![TaskFlowBoard](https://github.com/Dima-Bulgakov/Pet-Project-Aldebaran/blob/2a0b65616aeafbf3f8f0943821684d59751ed293/screens.png)
 
+## Video
+![vid4](https://github.com/Dima-Bulgakov/Pet-Project-Aldebaran/assets/111886499/2f046092-9656-4ebf-aafe-a27547d81fa2)
+
+
 ## Tools
 
 [![MIT License](https://img.shields.io/badge/-Swift-orange)](https://developer.apple.com/swift/)
